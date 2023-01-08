@@ -1,6 +1,6 @@
 ---
 substitutions:
-  device_name: HyperSerialESP32
+  device_name: 'hyperserialesp32'
   project_version: '1.0'
   device_description: 'High speed 2Mb USB serial port LED strip driver using ESP32 devices. Port of my HyperSerialEsp8266 for ESP32 + multisegment/multithreading support.'
   espboard: 'esp32dev' # or use lolin_s2_mini
@@ -17,7 +17,7 @@ esphome:
   comment: '${device_description}'
   platformio_options:
     build_flags:
-      - 'DNEOPIXEL_RGBW -DCOLD_WHITE -DDATA_PIN=2 -DSERIALCOM_SPEED=2000000'
+      - '-DNEOPIXEL_RGBW -DCOLD_WHITE -DDATA_PIN=2 -DSERIALCOM_SPEED=2000000'
 
 esp32:
   board: '${espboard}'
